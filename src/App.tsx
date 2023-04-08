@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Divider } from '@mui/material'
+import { Container} from '@mui/material';
+
+import { UseStateComponent } from './reactHooks/useState/useState';
+import { UseEffectComponent } from './reactHooks/useEffect/useEffect';
+import { UseContextComponent } from './reactHooks/useContext/useContext';
+import { UseReducerComponent } from './reactHooks/useReducer/useReducer';
+import { UseRefComponent } from './reactHooks/useRef/useRef';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Container maxWidth='sm'>
+        <UseStateComponent/>
+        <Divider />
+        <UseEffectComponent/>
+        <Divider />
+        <UseContextComponent />
+        <Divider />
+        <UseReducerComponent />
+        <Divider />
+        <UseRefComponent />
+        <Divider/>
+        {/* <CustomHookComponent/>
+        <Divider /> */}
+     </Container>
+    </React.Fragment>
   );
 }
 
